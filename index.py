@@ -1,7 +1,10 @@
 import tkinter as tk
+from tkinter import messagebox
 
 def donothing():
     ...
+
+tk._test()
 
 window = tk.Tk()
 
@@ -13,8 +16,8 @@ file_menu.add_command(label="Save", command=donothing)
 file_menu.add_separator()
 file_menu.add_command(label="Exit", command=window.quit)
 menu_bar.add_cascade(label="File", menu=file_menu)
-
-
-
 window.config(menu=menu_bar)
+
+box = tk.messagebox.askquestion(title=None, message='What?')
+
 window.mainloop()
