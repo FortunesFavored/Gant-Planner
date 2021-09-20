@@ -2,11 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 class secondWindow:
-    def donothing():
-        ...
-
-    def make_window(self):
-
+    def __init__():
         window = tk.Tk()
 
         menu_bar = tk.Menu(window)
@@ -20,3 +16,6 @@ class secondWindow:
         window.config(menu=menu_bar)
 
         window.mainloop()
+
+    def donothing():
+        ...
