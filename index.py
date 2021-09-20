@@ -1,10 +1,14 @@
 import tkinter as tk
 from tkinter import messagebox
+import second_window
 
 def donothing():
     ...
 
-tk._test()
+def make_new_window():
+    new_window = second_window.secondWindow()
+    new_window.make_window()
+
 
 window = tk.Tk()
 
@@ -18,6 +22,7 @@ file_menu.add_command(label="Exit", command=window.quit)
 menu_bar.add_cascade(label="File", menu=file_menu)
 window.config(menu=menu_bar)
 
-box = tk.messagebox.askquestion(title=None, message='What?')
+button = tk.Button(window,text="Make a second window", command=make_new_window)
+button.pack()
 
 window.mainloop()
